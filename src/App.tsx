@@ -1,19 +1,24 @@
-import { useEffect } from "react"
-
-import { Teste } from "@/components/teste"
-import { globalStyle } from "./stitches.config"
-
 import '@ionic/react/css/core.css';
-import { setupIonicReact } from '@ionic/react';
+
+import { useEffect } from "react";
+
+import { globalStyle } from "./stitches.config";
+
+import { IonApp, setupIonicReact } from '@ionic/react';
+import { Routes } from "./routes";
 
 setupIonicReact();
+
 
 function App() {
   useEffect(() => {
     globalStyle()
   }, [])
+
   return (
-    <Teste />
+    <IonApp>
+      <Routes />
+    </IonApp>
   )
 }
 
